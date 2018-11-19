@@ -1,0 +1,21 @@
+Feature: Reset functionality on login page of Application
+
+  @test
+  Scenario: Fill in Personal details                                     [90m# UserRegistration.feature:16[0m
+    [32mGiven [0m[32mI am on the registration portal[0m                                [90m# Steps.open_the_browser_and_launch_the_application()[0m
+    [32mAnd [0m[32mI Enter the correct registration details[0m                         [90m# Steps.enter_correct_signup_details()[0m
+    [32mThen [0m[32mI should be on the personal details page[0m                        [90m# Steps.assert_user_on_personal_details_page()[0m
+    [32mAnd [0m[32mI fill all the personal details with "[0m[32m[1mMrs[0m[32m" as title[0m              [90m# Steps.i_fill_all_the_personal_details_with_as_title(String)[0m
+    [32mWhen [0m[32mI fill in postcode "[0m[32m[1mW5 2ET[0m[32m"[0m                                     [90m# Steps.i_fill_in_postcode(String)[0m
+    [32mAnd [0m[32mI click Lookup Address[0m                                           [90m# Steps.i_click_Lookup_Address()[0m
+    [32mWhen [0m[32mI select the first line of address as "[0m[32m[1mFlat 3 - Beverley Place[0m[32m"[0m [90m# Steps.i_select_the_first_line_of_address(String)[0m
+    [32mAnd [0m[32mI click on Save on the address list menu[0m                         [90m# Steps.i_click_on_Save_on_the_address_list_menu()[0m
+    [32mThen [0m[32mI should be on the personal details page[0m                        [90m# Steps.assert_user_on_personal_details_page()[0m
+    [32mAnd [0m[32mI should have the next button[0m                                    [90m# Steps.i_should_have_the_Save_button()[0m
+    [32mWhen [0m[32mUser click on next button[0m                                       [90m# Steps.user_click_on_next_button()[0m
+    [32mThen [0m[32mUser should be on the "[0m[32m[1mQualifications & Training[0m[32m" page[0m          [90m# Steps.user_should_be_on_the_page(String)[0m
+    [32mWhen [0m[32muser clicks on "[0m[32m[1mAdd Qualification[0m[32m" button[0m                       [90m# Steps.user_clicks_on_button(String)[0m
+    [32mThen [0m[32muser should be able to enter qualification completion date[0m      [90m# Steps.user_should_be_able_to_enter_qualification_completion_date()[0m
+    [32mWhen [0m[32muser clicks on the "[0m[32m[1mAdd[0m[32m" button[0m                                 [90m# Steps.user_clicks_on_the_button(String)[0m
+    [32mAnd [0m[32muser click on qualification added Next button[0m                    [90m# Steps.user_click_on_button()[0m
+    [32mThen [0m[32muser should be on the History page[0m                              [90m# Steps.user_should_be_on_the_History_page()[0m
